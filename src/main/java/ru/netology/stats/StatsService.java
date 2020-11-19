@@ -2,24 +2,20 @@ package ru.netology.stats;
 
 public class StatsService {
 
-    public int calculateSum(int[] purchases) {
-        int sum = 0;
+    public int sum(int[] purchases) {
+        int result = 0;
         for (int purchase : purchases) {
-            sum = sum + purchase;
+            result += purchase;
         }
-        return sum;
+        return result;
     }
 
-    public int calculateAmountPerMonth(int[] purchases) {
-        int amount = 0;
-        int month = 12;
-        for (int purchase : purchases) {
-            amount += purchase;
-        }
-        return amount / month;
+    public int avarage(int[] purchases) {
+
+        return sum(purchases) / purchases.length;
     }
 
-    public int calculateSaleMax(int[] purchases) {
+    public int SaleMax(int[] purchases) {
         int maxSale = 0;
         int monthNumber = 0;
         int currentMonthNumber = 1;
@@ -33,7 +29,7 @@ public class StatsService {
         return monthNumber;
     }
 
-    public int calculateSaleMin(int[] purchases) {
+    public int SaleMin(int[] purchases) {
         int minSale = purchases[0];
         int monthNumber = 0;
         int currentMonthNumber = 1;
@@ -47,27 +43,24 @@ public class StatsService {
         return monthNumber;
     }
 
-    public int calculateAmountPerMax(int[] purchases) {
-        int amount = 15;
+    public int AvaragePerMax(int[] purchases) {
+        int avarage = avarage(purchases);
         int count = 0;
         for (int purchase : purchases) {
-            if (purchase < amount) {
+            if (purchase > avarage) {
                 count++;
             }
-
         }
         return count;
     }
 
-    public int calculateAmountPerMin(int[] purchases) {
-        int amount = 15;
+    public int AvaragePerMin(int[] purchases) {
+        int avarage = avarage(purchases);
         int count = 0;
         for (int purchase : purchases) {
-            if (purchase > amount) {
+            if (purchase < avarage) {
                 count++;
-
             }
-
         }
         return count;
     }
