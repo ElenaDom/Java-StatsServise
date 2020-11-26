@@ -43,25 +43,25 @@ public class StatsService {
         return monthNumber;
     }
 
-//    public int AvaragePerMax(int[] purchases) {
-//        int avarage = avarage(purchases);
-//        int count = 0;
-//        for (int purchase : purchases) {
-//            if (purchase > avarage) {
-//                count++;
-//            }
-//        }
-//        return count;
-//    }
-//
-//    public int AvaragePerMin(int[] purchases) {
-//        int avarage = avarage(purchases);
-//        int count = 0;
-//        for (int purchase : purchases) {
-//            if (purchase < avarage) {
-//                count++;
-//            }
-//        }
-//        return count;
-//    }
+    public int AvaragePerMax(int[] purchases) {
+        int avarage = avarage(purchases);
+        int count = 0;
+        for (int purchase : purchases) {
+            if (purchase > avarage) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public int AvaragePerMin(int[] purchases) {
+        int avarage = avarage(purchases);
+        int count = 0;
+        for (int purchase : purchases) {
+            if (purchase < avarage) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

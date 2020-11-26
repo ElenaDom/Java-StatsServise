@@ -42,20 +42,20 @@ class StatsServiceTest {
         int actual = service.SaleMin(purchases);
         assertEquals(expected, actual);
     }
-//    @Test
-//    void shouldAvaragetPerMax() {
-//        StatsService service = new StatsService();
-//        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-//        int expected = 5;
-//        int actual = service.AvaragePerMax(purchases);
-//        assertEquals(expected, actual);
-//    }
-//    @Test
-//    void shouldAvaregePerMin() {
-//        StatsService service = new StatsService();
-//        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-//        int expected = 5;
-//        int actual = service.AvaragePerMin(purchases);
-//        assertEquals(expected, actual);
-//    }
+    @Test
+    void shouldAvaragetPerMax() {
+        StatsService service = new StatsService();
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+        int actual = service.AvaragePerMax(purchases);
+        assertEquals(expected, actual);
+    }
+    @Test
+    void shouldAvaregePerMin() {
+        StatsService service = new StatsService();
+        int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+        int actual = service.AvaragePerMin(purchases);
+        assertEquals(expected, actual);
+    }
 }
